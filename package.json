@@ -1,0 +1,33 @@
+{
+  "name": "battleship-performance",
+  "version": "1.0.0",
+  "description": "A command-line utility to test battleship bot performance",
+  "main": "index.js",
+  "preferGlobal": true,
+  "bin": "./dist/battleship_performance.js",
+  "scripts": {
+    "start": "nodemon --exec ts-node -- ./src/battleship_performance.ts",
+    "ts-node": "ts-node ./src/battleship_performance.ts",
+    "build": "tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "chalk": "^4.1.2",
+    "commander": "^8.1.0",
+    "commander-ts": "^0.1.5",
+    "core-js": "^3.16.1",
+    "inquirer": "^8.1.2",
+    "ora": "^5.4.1",
+    "rxjs": "^7.3.0",
+    "typescript": "^4.3.5"
+  },
+  "devDependencies": {
+    "@types/chalk": "^2.2.0",
+    "@types/commander": "^2.12.2",
+    "@types/core-js": "^2.5.5",
+    "@types/inquirer": "^7.3.3",
+    "@types/ora": "^3.2.0"
+  }
+}

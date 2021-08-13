@@ -1,22 +1,20 @@
 {
   "name": "battleship-performance",
-  "version": "1.0.0",
-  "description": "A command-line utility to test battleship bot performance",
+  "version": "1.0.1",
+  "description": "A command-line utility to estimate battleship bot performance in terms of number of turns to will opponent",
   "main": "index.js",
   "preferGlobal": true,
   "bin": "./dist/battleship_performance.js",
   "scripts": {
-    "start": "nodemon --exec ts-node -- ./src/battleship_performance.ts",
+    "start":"node ./dist/battleship_performance.js",
+    "devstart": "nodemon --exec ts-node -- ./src/battleship_performance.ts",
     "ts-node": "ts-node ./src/battleship_performance.ts",
     "build": "tsc"
   },
-  "author": "",
+  "author": "Rae-Win Tan",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.21.1",
-    "chalk": "^4.1.2",
     "commander": "^8.1.0",
-    "commander-ts": "^0.1.5",
     "core-js": "^3.16.1",
     "inquirer": "^8.1.2",
     "ora": "^5.4.1",
@@ -29,5 +27,21 @@
     "@types/core-js": "^2.5.5",
     "@types/inquirer": "^7.3.3",
     "@types/ora": "^3.2.0"
+  },
+  "keywords":[
+    "battleship",
+    "bot",
+    "performance"
+  ],
+  "repository":{
+    "type":"git",
+    "url":"git+https://github.com/RaeWinTan/battleship_perfomance.git"
+  },
+  "bugs":{
+    "url":"https://github.com/RaeWinTan/battleship_perfomance/issues"
+  },
+  "homepage":{
+    "url":"https://github.com/RaeWinTan/battleship_perfomance#readme"
   }
+
 }

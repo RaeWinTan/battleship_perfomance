@@ -13,13 +13,19 @@ const questions:any[] = [
 ];
 commander
   .version('1.0.0')
-  .description('Contact Management System')
+  .description('Test battleship bot (https://github.com/RaeWinTan/RXJSLearn) performance')
 commander
   .command('setTest')
     .alias('st')
-    .description('Set grid size')
+    .description('Set test parameters')
     .action(() => {
-        inquirer.prompt(questions).then((p:any) =>start(p.gridSize, p.ships, p.iterations))
+        inquirer.prompt(questions).then((p:any) =>{
+            if(Number.isNaN(p.gridSize) || Number.isNaN(p.ships) || Number.isNaN(p.iterations)){
+              console.error("All parameters must be filled");
+              process.exit();
+            }
+            start(p.gridSize, p.ships, p.iterations)
+        })
     })
 
 if(!process.argv.slice(2).length) {
